@@ -1,0 +1,360 @@
+/* Estilos generales */
+:root {
+  --fondo: #f3f6fb;
+  --panel: #ffffff;
+  --texto: #202a3b;
+  --secundario: #667085;
+  --principal: #3157c8;
+  --principal-oscuro: #2445a6;
+  --borde: #e1e7f0;
+  --verde: #18794e;
+  --rojo: #b42318;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.contenedor {
+  width: min(100% - 32px, 960px);
+  margin: 0 auto;
+}
+
+.encabezado {
+  padding: 42px 0 36px;
+  background: linear-gradient(135deg, #203b91, #4269d8);
+  color: white;
+}
+
+.sobre-titulo {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.bajada {
+  max-width: 620px;
+  margin-bottom: 0;
+  color: #e7ecff;
+}
+
+.contenido {
+  display: grid;
+  gap: 22px;
+  padding-top: 26px;
+  padding-bottom: 36px;
+}
+
+.panel {
+  padding: 24px;
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: 0 8px 24px rgba(30, 48, 85, 0.05);
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 1.35rem;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+.campo {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+input, select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #cbd4e2;
+  border-radius: 9px;
+  background: white;
+  color: var(--texto);
+  font: inherit;
+}
+
+input:focus, select:focus {
+  outline: 3px solid #dbe5ff;
+  border-color: var(--principal);
+}
+
+.boton {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.boton:hover {
+  transform: translateY(-1px);
+}
+
+.boton-principal {
+  background: var(--principal);
+  color: white;
+}
+
+.boton-principal:hover {
+  background: var(--principal-oscuro);
+}
+
+.boton-secundario {
+  background: #e8edff;
+  color: #233f9d;
+}
+
+.encabezado-lista {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.encabezado-lista h2 {
+  margin-bottom: 4px;
+}
+
+.texto-secundario {
+  margin-bottom: 0;
+  color: var(--secundario);
+  font-size: 0.94rem;
+}
+
+.contador {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #edf1ff;
+  color: #2948ad;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.lista-tareas {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.mensaje-vacio {
+  padding: 22px 12px;
+  border: 1px dashed #cbd4e2;
+  border-radius: 12px;
+  color: var(--secundario);
+  text-align: center;
+}
+
+.tarjeta-tarea {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.tarjeta-tarea.completada {
+  background: #f6fbf8;
+}
+
+.tarjeta-tarea.completada .nombre-tarea {
+  color: var(--secundario);
+  text-decoration: line-through;
+}
+
+.nombre-tarea {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+  font-size: 1.02rem;
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.etiqueta {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #eef2f7;
+  color: #475467;
+  font-size: 0.78rem;
+}
+
+.prioridad-alta {
+  background: #fee4e2;
+  color: #912018;
+}
+
+.prioridad-media {
+  background: #fff0c2;
+  color: #854d0e;
+}
+
+.prioridad-baja {
+  background: #dcfae6;
+  color: #166534;
+}
+
+.estado-tarea {
+  margin: 8px 0 0;
+  color: var(--secundario);
+  font-size: 0.82rem;
+}
+
+.acciones-tarea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 8px;
+}
+
+.boton-pequeno {
+  min-height: 36px;
+  padding: 7px 10px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: white;
+  color: var(--texto);
+  font: inherit;
+  font-size: 0.84rem;
+  cursor: pointer;
+}
+
+.boton-pequeno:hover {
+  background: #f2f5fa;
+}
+
+.boton-eliminar {
+  color: var(--rojo);
+}
+
+.panel-clima {
+  display: grid;
+  gap: 18px;
+}
+
+.panel-clima h2 {
+  margin-bottom: 4px;
+}
+
+.formulario-clima {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+}
+
+.resultado-clima {
+  min-height: 60px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f0f5ff;
+}
+
+.resultado-clima p {
+  margin-bottom: 0;
+}
+
+.datos-clima {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.temperatura {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nota-api {
+  margin: 0;
+  color: var(--secundario);
+  font-size: 0.82rem;
+}
+
+.pie {
+  padding: 22px 16px;
+  color: var(--secundario);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.pie p {
+  margin: 0;
+}
+
+@media (min-width: 720px) {
+  .contenido {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+  }
+
+  .panel-clima {
+    grid-column: 1 / -1;
+  }
+
+  #formulario-tarea {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #formulario-tarea .campo:first-child {
+    grid-column: 1 / -1;
+  }
+
+  #formulario-tarea .boton {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .panel {
+    padding: 18px;
+  }
+
+  .tarjeta-tarea {
+    grid-template-columns: 1fr;
+  }
+
+  .acciones-tarea {
+    justify-content: start;
+  }
+
+  .formulario-clima {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizador de tareas y clima</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <p class="sobre-titulo">ORGANIZÁ TU DÍA</p>
+      <h1>Mis tareas</h1>
+      <p class="bajada">Un lugar sencillo para organizar tus pendientes y consultar el clima.</p>
+    </div>
+  </header>
+
+  <main class="contenedor contenido">
+    <section class="panel" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Agregar una tarea</h2>
+      <form id="formulario-tarea">
+        <div class="campo">
+          <label for="nombre-tarea">Nombre de la tarea</label>
+          <input id="nombre-tarea" name="nombre" type="text" placeholder="Ej.: Estudiar JavaScript" required maxlength="100">
+        </div>
+        <div class="campo">
+          <label for="categoria-tarea">Categoría</label>
+          <select id="categoria-tarea" name="categoria" required>
+            <option value="">Elegí una categoría</option>
+            <option value="Estudio">Estudio</option>
+            <option value="Trabajo">Trabajo</option>
+            <option value="Personal">Personal</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="prioridad-tarea">Prioridad</label>
+          <select id="prioridad-tarea" name="prioridad" required>
+            <option value="">Elegí una prioridad</option>
+            <option value="Alta">Alta</option>
+            <option value="Media">Media</option>
+            <option value="Baja">Baja</option>
+          </select>
+        </div>
+        <button class="boton boton-principal" type="submit">Agregar tarea</button>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="titulo-lista">
+      <div class="encabezado-lista">
+        <div>
+          <h2 id="titulo-lista">Mi lista</h2>
+          <p class="texto-secundario">Tus tareas se guardan en este navegador.</p>
+        </div>
+        <span id="contador-tareas" class="contador">0 tareas</span>
+      </div>
+      <div id="lista-tareas" class="lista-tareas" aria-live="polite"></div>
+    </section>
+
+    <section class="panel panel-clima" aria-labelledby="titulo-clima">
+      <div>
+        <p class="sobre-titulo">INFORMACIÓN ACTUAL</p>
+        <h2 id="titulo-clima">El clima</h2>
+        <p class="texto-secundario">Consultá la temperatura de una ciudad.</p>
+      </div>
+      <form id="formulario-clima" class="formulario-clima">
+        <div class="campo">
+          <label for="ciudad">Ciudad</label>
+          <input id="ciudad" name="ciudad" type="text" value="San Miguel de Tucumán" required>
+        </div>
+        <button class="boton boton-secundario" type="submit">Consultar clima</button>
+      </form>
+      <div id="resultado-clima" class="resultado-clima" aria-live="polite">
+        <p>Ingresá una ciudad y seleccioná «Consultar clima».</p>
+      </div>
+      <p class="nota-api">Para consultar datos reales, configurá tu clave personal de OpenWeather en el archivo script.js.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Trabajo práctico integrador · Frontend con JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
