@@ -7,9 +7,7 @@
   - API con fetch, async/await y try/catch
 */
 
-// 1. CONFIGURACION DE OPENWEATHER
-// Reemplazá el texto de abajo por tu clave personal.
-// No compartas públicamente tu clave real.
+
 const API_KEY = "801b6ffdf78c7f95146f99918c15206b";
 
 // 2. SELECCIONAR ELEMENTOS DEL HTML
