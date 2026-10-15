@@ -1,10 +1,6 @@
 /*
   TRABAJO PRACTICO: Organizador de tareas y clima
-  Conceptos utilizados:
-  - Array de objetos
-  - DOM y eventos
-  - LocalStorage
-  - API con fetch, async/await y try/catch
+
 */
 
 
